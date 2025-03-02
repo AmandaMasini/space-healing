@@ -2,7 +2,7 @@
 
 const translations = {
     en: {
-      bannerSubheading: "Recognizing the connection between environment, well-being, and mental health is essential.",
+      bannerSubheading: "Recognizing the connection between<br /> environment, well-being, and mental health<br /> is essential.",
       startNow: "Start Now",
       contactUs: "Contact Us",
       healingSpacesText: "Our surroundings profoundly influence our mental health, well-being, and our journey toward personal and professional fulfillment, as our paths are built within these environments. Every aspect around us carries intrinsic symbolism, impacting us and triggering reactions, whether we consciously perceive it or not. Instead of solely focusing on adjusting our minds, manipulating our environment can serve as a catalyst for healing and progress. Small adjustments to our space can significantly enhance mood, functionality, and interpersonal interactions. Through personalized environmental interventions, we propose adjustments to correct imbalances and enhance positive aspects of spaces, promoting mental health and overall well-being.",
@@ -34,7 +34,7 @@ const translations = {
       ctaSubheading: "Take the first step toward a more balanced and harmonious environment. Start transforming your space today!"
     },
     pt: {
-      bannerSubheading: "Reconhecer a conexão entre o ambiente, o bem-estar e a saúde mental é essencial.",
+      bannerSubheading: "Reconhecer a conexão entre<br /> o ambiente, o bem-estar e a saúde mental<br /> é essencial.",
       startNow: "Comece Agora",
       contactUs: "Fale Conosco",
       healingSpacesText: "Nosso entorno influencia profundamente nossa saúde mental, bem-estar e nossa jornada rumo à realização pessoal e profissional, pois nossos caminhos se constroem dentro desses ambientes. Cada aspecto ao nosso redor carrega um simbolismo intrínseco, impactando-nos e desencadeando reações, quer percebamos conscientemente ou não. Em vez de focarmos somente em ajustar nossas mentes, manipular nosso ambiente pode servir como catalisador para a cura e o progresso. Pequenos ajustes no nosso espaço podem melhorar significativamente o humor, a funcionalidade e as interações interpessoais. Através de intervenções ambientais personalizadas, propomos ajustes para corrigir desequilíbrios e realçar aspectos positivos dos espaços, promovendo a saúde mental e o bem-estar geral.",
@@ -75,7 +75,8 @@ const translations = {
     document.querySelectorAll("[data-i18n]").forEach(function (element) {
       const key = element.getAttribute("data-i18n");
       if (translations[lang][key]) {
-        element.textContent = translations[lang][key];
+        //element.textContent = translations[lang][key];
+        element.innerHTML = translations[lang][key]; 
       }
     });
     localStorage.setItem("selectedLanguage", lang);
